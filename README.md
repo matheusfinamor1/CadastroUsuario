@@ -21,7 +21,4 @@ Projeto com intuito de utilizar ROOM Database e outras funcionalidades do Fireba
 
 # :heavy_check_mark: Técnicas e tecnologias utilizadas
 
-**Kotlin
-JetpackCompose
-Android Jetpack
-Firebase**
+**Kotlin, Jetpack Compose, Android Jetpack, Firebase**
