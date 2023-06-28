@@ -15,6 +15,10 @@ Projeto com intuito de utilizar ROOM Database e outras funcionalidades do Fireba
 - `Funcionalidade 2`: Gravar os dados do usuário remotamente, utilizando o Firebase.
 - `Funcionalidade 3`: Obter a lista de todos os usários.
 
+# 📁 Acesso ao projeto
+
+**Aqui, você consegue acessar a branch principal para clonar o projeto: https://github.com/matheusfinamor1/CadastroUsuario/tree/master**
+
 # :heavy_check_mark: Técnicas e tecnologias utilizadas
 
 **Kotlin, Jetpack Compose, Android Jetpack, Firebase**
