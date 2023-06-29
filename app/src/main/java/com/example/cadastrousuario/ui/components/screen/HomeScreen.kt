@@ -1,16 +1,26 @@
 package com.example.cadastrousuario.ui.components.screen
 
-import androidx.compose.foundation.layout.Arrangement
+import android.widget.Toast
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -21,26 +31,55 @@ import com.example.cadastrousuario.ui.components.ItemPasswordRegisterPreview
 
 @Composable
 fun HomeScreen() {
-    Column(
+    Box(
         modifier = Modifier
-            .fillMaxHeight()
-            .fillMaxWidth(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+            .fillMaxSize()
+            .padding(top = 24.dp),
+        contentAlignment = Alignment.TopCenter
     ) {
-        Text(
-            text = "Register",
-            fontSize = 28.sp,
-            fontWeight = FontWeight(400)
-        )
-        Spacer(modifier = Modifier.padding(top = 24.dp))
-        ItemNameRegisterPreview()
-        Spacer(modifier = Modifier.padding(top = 32.dp))
-        ItemEmailRegisterPreview()
-        Spacer(modifier = Modifier.padding(top = 32.dp))
-        ItemPasswordRegisterPreview(true)
-        Spacer(modifier = Modifier.padding(top = 32.dp))
-        ItemPasswordRegisterPreview(false)
+        val context = LocalContext.current
+        Column(
+            modifier = Modifier
+                .verticalScroll(rememberScrollState())
+                .fillMaxHeight()
+                .fillMaxWidth()
+        ) {
+
+            Text(
+                text = "Register",
+                fontSize = 28.sp,
+                fontWeight = FontWeight(400),
+                modifier = Modifier.align(CenterHorizontally)
+            )
+            Spacer(modifier = Modifier.padding(top = 24.dp))
+            ItemNameRegisterPreview(modifier = Modifier.align(CenterHorizontally))
+            Spacer(modifier = Modifier.padding(top = 32.dp))
+            ItemEmailRegisterPreview(modifier = Modifier.align(CenterHorizontally))
+            Spacer(modifier = Modifier.padding(top = 32.dp))
+            ItemPasswordRegisterPreview(true, modifier = Modifier.align(CenterHorizontally))
+            Spacer(modifier = Modifier.padding(top = 32.dp))
+            ItemPasswordRegisterPreview(
+                false,
+                modifier = Modifier
+                    .align(CenterHorizontally)
+                    .padding(bottom = 24.dp)
+            )
+
+        }
+        FloatingActionButton(
+            onClick = {
+                Toast.makeText(
+                    context,
+                    "Registrado!",
+                    Toast.LENGTH_LONG
+                ).show()
+            },
+            modifier = Modifier
+                .align(alignment = Alignment.BottomEnd)
+                .padding(all = 24.dp)
+        ) {
+            Icon(imageVector = Icons.Filled.Check, contentDescription = null)
+        }
     }
 }
 
