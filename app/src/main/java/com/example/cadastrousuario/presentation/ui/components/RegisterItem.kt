@@ -1,4 +1,4 @@
-package com.example.cadastrousuario.ui.components
+package com.example.cadastrousuario.presentation.ui.components
 
 import android.content.Context
 import android.widget.Toast

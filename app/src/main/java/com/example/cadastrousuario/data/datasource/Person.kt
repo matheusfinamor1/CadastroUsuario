@@ -1,11 +1,11 @@
-package com.example.cadastrousuario
+package com.example.cadastrousuario.data.datasource
 
 import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-//@Parcelize
+//Parcelize
 @Entity(tableName = "people")
 data class Person(
     @PrimaryKey(autoGenerate = false)
@@ -14,7 +14,7 @@ data class Person(
     var id: Int,
 
     @ColumnInfo(name = "personId")
-    var personId: Long,
+    var personId: Int,
 
     @ColumnInfo(name = "personName")
     var personName: String,

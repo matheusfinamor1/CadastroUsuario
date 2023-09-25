@@ -1,4 +1,4 @@
-package com.example.cadastrousuario.ui.theme
+package com.example.cadastrousuario.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

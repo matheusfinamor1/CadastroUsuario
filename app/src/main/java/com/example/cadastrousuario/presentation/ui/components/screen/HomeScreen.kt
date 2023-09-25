@@ -1,4 +1,4 @@
-package com.example.cadastrousuario.ui.components.screen
+package com.example.cadastrousuario.presentation.ui.components.screen
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -19,10 +19,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.cadastrousuario.ui.components.ItemEmailRegisterPreview
-import com.example.cadastrousuario.ui.components.ItemFABPreview
-import com.example.cadastrousuario.ui.components.ItemNameRegisterPreview
-import com.example.cadastrousuario.ui.components.ItemPasswordRegisterPreview
+import com.example.cadastrousuario.presentation.ui.components.ItemEmailRegisterPreview
+import com.example.cadastrousuario.presentation.ui.components.ItemFABPreview
+import com.example.cadastrousuario.presentation.ui.components.ItemNameRegisterPreview
+import com.example.cadastrousuario.presentation.ui.components.ItemPasswordRegisterPreview
 
 @Composable
 fun HomeScreen() {
