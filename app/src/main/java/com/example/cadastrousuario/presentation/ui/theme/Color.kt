@@ -1,4 +1,4 @@
-package com.example.cadastrousuario.ui.theme
+package com.example.cadastrousuario.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
